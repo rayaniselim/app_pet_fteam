@@ -9,17 +9,27 @@ class Home extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
         title: const SizedBox(
-          child: Text('Pets'),
+          child: Text(
+            'Cameron St., Boston',
+            style: TextStyle(
+                color: Color.fromARGB(255, 55, 52, 52),
+                fontWeight: FontWeight.bold,
+                fontSize: 18),
+          ),
         ),
+        //floating: true,
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: GridView.count(
-          crossAxisCount: 1,
-          crossAxisSpacing: 20,
-          mainAxisSpacing: 20,
-          children: [
+        child: ListView(
+          // crossAxisCount: 1,
+          // crossAxisSpacing: 20,
+          // mainAxisSpacing: 20,
+          children: const [
             ItemPet(
               nome: 'Flora',
               raca: 'Chihuahua',
@@ -28,14 +38,18 @@ class Home extends StatelessWidget {
               image: 'assets/image/c1.png',
               localizacao: '2.5 kms away',
             ),
-            // ItemPet(
-            //   nome: 'Charlie',
-            //   raca: 'Buldogue',
-            //   idade: '1.5 years old',
-            //   sexo: 'Male',
-            //   image: 'assets/image/c2.png',
-            //   localizacao: '1.6 kms away',
-            // ),
+            SizedBox(
+              height: 25,
+            ),
+            ItemPet(
+              nome: 'Charlie',
+              raca: 'Buldogue',
+              idade: '1.5 years old',
+              sexo: 'Male',
+              image: 'assets/image/c2.png',
+              localizacao: '1.6 kms away',
+            ),
+            SizedBox(height: 25),
             // ItemPet(
             //   nome: 'Daisy',
             //   raca: 'procurar',
@@ -44,6 +58,7 @@ class Home extends StatelessWidget {
             //   image: 'assets/image/c3.png',
             //   localizacao: '2 kms away',
             // ),
+            //SizedBox(height: 25),
             // ItemPet(
             //   nome: 'Sparky',
             //   raca: 'procurar',
@@ -52,6 +67,7 @@ class Home extends StatelessWidget {
             //   image: 'assets/image/c5.png',
             //   localizacao: '1.8 kms away',
             // ),
+            //SizedBox(height: 25),
             // ItemPet(
             //   nome: 'Max',
             //   raca: 'procurar',
@@ -60,6 +76,7 @@ class Home extends StatelessWidget {
             //   image: 'assets/image/c6.png',
             //   localizacao: '2.6 kms away',
             // ),
+            //SizedBox(height: 25),
             // ItemPet(
             //   nome: 'Zoe',
             //   raca: 'Buldogue Frances',

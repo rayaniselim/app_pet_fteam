@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class ItemPet extends StatefulWidget {
-  String nome;
-  String raca;
-  String idade;
-  String sexo;
-  String image;
-  String localizacao;
+  final String nome;
+  final String raca;
+  final String idade;
+  final String sexo;
+  final String image;
+  final String localizacao;
 
-  ItemPet({
+  const ItemPet({
     Key? key,
     required this.nome,
     required this.raca,
@@ -27,42 +26,53 @@ class _ItemPetState extends State<ItemPet> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
-      width: 300,
+      height: 160,
+      width: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: const Color.fromRGBO(255, 255, 255, 1),
+        color: Colors.white,
       ),
       padding: const EdgeInsets.all(16),
-      child: Row(
+      child: ListView(
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        // mainAxisSize: MainAxisSize.max,
         children: [
           const Icon(Icons.favorite_border, color: Colors.grey, size: 35),
           Row(
+            //   mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                height: 130,
-                width: 130,
+                height: 90,
+                width: 90,
 //https://macoratti.net/19/09/flut_circimg2.htm fonte
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(30),
                   image: DecorationImage(
                     fit: BoxFit.contain,
-                    image: AssetImage('${widget.image}'),
+                    image: AssetImage(widget.image),
                   ),
                 ),
               ),
+              Row(
+                children: [
+                  Container(
+                    color: Colors.purple,
+                    height: 100,
+                    width: 100,
+                    child: Text(widget.nome,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 23)),
+                    // Text(widget.raca),
+                    //Text('${widget.sexo}, ${widget.idade}'),
+                  ),
+                ],
+              ),
             ],
           ),
-          Text('${widget.nome}',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23)),
-          Text('${widget.raca}'),
-          Text('${widget.sexo}, ${widget.idade}'),
-          Icon(Icons.location_on_sharp, color: Colors.deepOrange, size: 23),
-          Text('${widget.localizacao}'),
+          const Icon(Icons.location_on_sharp,
+              color: Colors.deepOrange, size: 23),
+          Text(widget.localizacao),
         ],
       ),
     );
