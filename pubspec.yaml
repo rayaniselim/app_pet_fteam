@@ -45,6 +45,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  dependencies:
+  animated_icon_button: ^1.0.2
+  animated_icon: ^0.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -65,6 +68,12 @@ flutter:
       - assets/image/c4.png
       - assets/image/c5.png
       - assets/image/c6.png
+      - assets/icon/images/settings.png
+      - assets/icon/images/dog.png
+      - assets/icon/images/cat.png
+      - assets/icon/images/bird.png
+      - assets/icon/images/2.png
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
