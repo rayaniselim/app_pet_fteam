@@ -26,7 +26,7 @@ class AppBarComponents extends StatelessWidget {
           Text(
             'Location',
             style: TextStyle(
-              color: Colors.grey[300],
+              color: Colors.grey[400],
               fontSize: 14,
             ),
           ),

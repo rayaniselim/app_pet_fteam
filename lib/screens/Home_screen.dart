@@ -24,12 +24,12 @@ class HomeScreen extends StatelessWidget {
           children: [
             SizedBox(
 // proporcao da tela é 1, ai divide em 0. x
-              height: MediaQuery.of(context).size.height * 0.13,
+              height: MediaQuery.of(context).size.height * 0.15,
               width: MediaQuery.of(context).size.width,
               child: const PetCategoriesListComponent(),
             ),
             SizedBox(
-              height: (MediaQuery.of(context).size.height * 0.86) - 115,
+              height: (MediaQuery.of(context).size.height * 0.85) - 115,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: listPetData.length,
