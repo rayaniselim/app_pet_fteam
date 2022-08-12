@@ -1,4 +1,4 @@
-import 'package:app_pet_fteam/components/item_pet.dart';
+import '../model/item_pet_model.dart';
 
 const List<ItemPet> listPetData = [
   ItemPet(

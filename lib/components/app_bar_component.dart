@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// barra branca da app bar
 class AppBarComponents extends StatelessWidget {
   const AppBarComponents({Key? key}) : super(key: key);
 
@@ -16,8 +17,8 @@ class AppBarComponents extends StatelessWidget {
           bottom: 0,
         ),
         child: Image.asset(
-          'assets/icon/images/settings.png',
-          height: 30,
+          'assets/icon/images/line.png',
+          color: Colors.grey[700],
         ),
       ),
       title: Column(
@@ -26,7 +27,7 @@ class AppBarComponents extends StatelessWidget {
             'Location',
             style: TextStyle(
               color: Colors.grey[300],
-              fontSize: 12,
+              fontSize: 14,
             ),
           ),
           Text(
@@ -49,7 +50,7 @@ class AppBarComponents extends StatelessWidget {
           ),
           child: CircleAvatar(
             backgroundImage: AssetImage(
-              'assets/icon/images/2.png',
+              'assets/icon/images/1.png',
             ),
           ),
         ),

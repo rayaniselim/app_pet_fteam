@@ -1,4 +1,4 @@
-import 'package:app_pet_fteam/components/item_pet.dart';
+import 'package:app_pet_fteam/model/item_pet_model.dart';
 import 'package:flutter/material.dart';
 
 class ItemPetComponents extends StatelessWidget {
@@ -9,65 +9,76 @@ class ItemPetComponents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 160,
-        width: 160,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color: Colors.white,
-        ),
-        padding: const EdgeInsets.all(16),
-        child: ListView(
+      height: 150,
+      width: 300,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.white,
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Container(
+        color: Colors.white,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              color: Colors.white,
-              height: 1,
-              width: 1,
-              alignment: Alignment.bottomRight,
-              child: const IconButton(
-                icon: Icon(
-                  Icons.favorite_border,
-                  color: Colors.grey,
-                  size: 35,
+              height: 130,
+              width: 130,
+// https://macoratti.net/19/09/flut_circimg2.htm
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(34),
+                image: DecorationImage(
+                  fit: BoxFit.contain,
+                  image: AssetImage(pet.image),
                 ),
-                onPressed: null,
               ),
             ),
-            Row(
-              //   mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  height: 90,
-                  width: 90,
-//https://macoratti.net/19/09/flut_circimg2.htm fonte
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.circular(30),
-                    image: const DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage('image'),
+            Container(
+              color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(pet.nome,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 18)),
+                  Text(
+                    pet.raca,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                      fontSize: 14,
                     ),
                   ),
-                ),
-                Row(
-                  children: [
-                    Container(
-                      color: Colors.purple,
-                      height: 100,
-                      width: 100,
-                      child: const Text('nome',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 23)),
-                      // Text(widget.raca),
-                      //Text('${widget.sexo}, ${widget.idade}'),
+                  Text(
+                    '${pet.sexo}, ${pet.idade}',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey,
+                      fontSize: 14,
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  const Icon(Icons.location_on_sharp,
+                      color: Colors.deepOrange, size: 18),
+                  Text(
+                    pet.localizacao,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            const Icon(Icons.location_on_sharp,
-                color: Colors.deepOrange, size: 23),
-            const Text('localizacao'),
+            const Icon(
+              Icons.favorite_border,
+              color: Colors.grey,
+              size: 28,
+            ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

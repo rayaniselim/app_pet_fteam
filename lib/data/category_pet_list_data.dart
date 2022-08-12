@@ -1,12 +1,4 @@
-class CategoryPet {
-  final String especie;
-  final String icone;
-
-  const CategoryPet({
-    required this.especie,
-    required this.icone,
-  });
-}
+import 'package:app_pet_fteam/model/category_pet_model.dart';
 
 const List<CategoryPet> categoryPetList = [
   CategoryPet(
