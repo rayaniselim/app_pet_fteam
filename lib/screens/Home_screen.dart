@@ -48,9 +48,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   shrinkWrap: false,
                   itemBuilder: (context, index) {
-                    return ItemPetComponents(
-                      pet: listPetData[index],
-                    );
+                    return ItemPetComponents(pet: listPetData[index]);
                   },
                 ),
               ),
