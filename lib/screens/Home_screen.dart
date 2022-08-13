@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               child: SizedBox(
                 //  height: (MediaQuery.of(context).size.height * 0.85) - 115,
                 // width: MediaQuery.of(context).size.width,
-                child: ListView.builder(
+                child: ListView.separated(
                   scrollDirection: Axis.vertical,
                   itemCount: listPetData.length,
                   padding: const EdgeInsets.only(
@@ -49,6 +49,11 @@ class HomeScreen extends StatelessWidget {
                   shrinkWrap: false,
                   itemBuilder: (context, index) {
                     return ItemPetComponents(pet: listPetData[index]);
+                  },
+                  separatorBuilder: (context, index) {
+                    return const SizedBox(
+                      height: 18,
+                    );
                   },
                 ),
               ),

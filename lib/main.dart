@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-
       home: const HomeScreen(),
-      // home: ListPetData(),
     );
   }
 }
