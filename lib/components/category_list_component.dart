@@ -29,7 +29,7 @@ class PetCategoriesListComponent extends StatelessWidget {
                         child: SettingsItemComponent(),
                       )
                     : const SizedBox(),
-                indexAtual == 0 ? const SizedBox(width: 16) : const SizedBox(),
+                indexAtual == 0 ? const SizedBox(width: 10) : const SizedBox(),
                 ValueListenableBuilder(
                     valueListenable: indexSelecionado,
                     builder: (context, value, builder) {

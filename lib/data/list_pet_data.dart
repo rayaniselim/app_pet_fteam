@@ -49,4 +49,31 @@ const List<ItemPet> listPetData = [
     image: 'assets/image/c4.png',
     localizacao: '3.0 kms away',
   ),
+
+  // ----------
+
+  ItemPet(
+    nome: 'Sparky',
+    raca: 'procurar',
+    idade: '2 years old',
+    sexo: 'Male',
+    image: 'assets/image/c5.png',
+    localizacao: '1.8 kms away',
+  ),
+  ItemPet(
+    nome: 'Max',
+    raca: 'procurar',
+    idade: '5 months old',
+    sexo: 'Male',
+    image: 'assets/image/c6.png',
+    localizacao: '2.6 kms away',
+  ),
+  ItemPet(
+    nome: 'Zoe',
+    raca: 'Buldogue Frances',
+    idade: '1.2 years old',
+    sexo: 'Female',
+    image: 'assets/image/c4.png',
+    localizacao: '3.0 kms away',
+  ),
 ];

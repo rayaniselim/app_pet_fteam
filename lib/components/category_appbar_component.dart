@@ -20,24 +20,22 @@ class CategoryAppBarComponent extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-// mudar a cor do item selecionado
-        color: itemSelecionado == true ? Colors.deepOrange[400] : Colors.white,
-
+        color: itemSelecionado == true
+            ? Colors.deepOrange[400]
+            : Colors.white, // mudar a cor do item selecionado
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
         children: [
-// proporcao da tela
           AspectRatio(
-            aspectRatio: 1.3,
+            aspectRatio: 1.3, // proporcao da tela
             child: Image.asset(categoryPetModel.icone),
           ),
           const SizedBox(width: 6),
           Text(
             categoryPetModel.especie,
             style: const TextStyle(
-// espacamento no texto
-              letterSpacing: -0.8,
+              letterSpacing: -0.8, // espacamento no texto
               fontWeight: FontWeight.bold,
             ),
           ),
