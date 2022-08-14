@@ -1,9 +1,8 @@
 import 'package:app_pet_fteam/components/Item_pet_components.dart';
+import 'package:app_pet_fteam/components/app_bar_component.dart';
 import 'package:app_pet_fteam/components/category_list_component.dart';
 import 'package:app_pet_fteam/data/list_pet_data.dart';
 import 'package:flutter/material.dart';
-
-import '../mobile_app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(76),
-        child: AppBarMobile(),
+        child: AppBarComponents(),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -48,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   shrinkWrap: false,
                   itemBuilder: (context, index) {
-                    return ItemPetComponents(pet: listPetData[index]);
+                    return ItemPetComponents(petPage: listPetData[index]);
                   },
                   separatorBuilder: (context, index) {
                     return const SizedBox(

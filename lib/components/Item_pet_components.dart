@@ -2,11 +2,11 @@ import 'package:app_pet_fteam/model/item_pet_model.dart';
 import 'package:flutter/material.dart';
 
 class ItemPetComponents extends StatelessWidget {
-  final ItemPet pet;
+  final ItemPet petPage;
 
   const ItemPetComponents({
     Key? key,
-    required this.pet,
+    required this.petPage,
   }) : super(key: key);
 
   @override
@@ -34,7 +34,7 @@ class ItemPetComponents extends StatelessWidget {
                 color: Colors.white,
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage(pet.image),
+                  image: AssetImage(petPage.image),
                 ),
               ),
             ),
@@ -48,7 +48,7 @@ class ItemPetComponents extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      pet.nome,
+                      petPage.nome,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
@@ -56,7 +56,7 @@ class ItemPetComponents extends StatelessWidget {
                       textAlign: TextAlign.start,
                     ),
                     Text(
-                      pet.raca,
+                      petPage.raca,
                       style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Colors.black,
@@ -65,7 +65,7 @@ class ItemPetComponents extends StatelessWidget {
                       textAlign: TextAlign.start,
                     ),
                     Text(
-                      '${pet.sexo}, ${pet.idade}',
+                      '${petPage.sexo}, ${petPage.idade}',
                       style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Colors.grey,
@@ -82,7 +82,7 @@ class ItemPetComponents extends StatelessWidget {
                             size: 18,
                           ),
                           Text(
-                            pet.localizacao,
+                            petPage.localizacao,
                             style: const TextStyle(
                               fontWeight: FontWeight.w400,
                               color: Colors.grey,
