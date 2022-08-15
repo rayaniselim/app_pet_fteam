@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import '../data/list_pet_data.dart';
-import '../components/description_pet_preview.dart';
+import 'description_screen_body.dart';
 
-class DescriptionScreen extends StatefulWidget {
-  const DescriptionScreen({Key? key}) : super(key: key);
+class PetDescriptionScreen extends StatefulWidget {
+  const PetDescriptionScreen({Key? key}) : super(key: key);
 
   @override
-  State<DescriptionScreen> createState() => _DescriptionScreenState();
+  State<PetDescriptionScreen> createState() => _DescriptionScreenState();
 }
 
-class _DescriptionScreenState extends State<DescriptionScreen> {
+class _DescriptionScreenState extends State<PetDescriptionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +28,6 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
           ),
         ),
         leadingWidth: 40,
-        title: Column(
-          children: const [
-            Text(''),
-          ],
-        ),
         actions: const [
           Padding(
             padding: EdgeInsets.only(
@@ -50,16 +44,7 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
           ),
         ],
       ),
-      body: Container(
-        height: 180,
-        width: 390,
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.white,
-        ),
-        child: DescriptionPetPreview(petDescription: listPetData[1]),
-      ),
+      body: const PetDescriptionScreenBody(),
     );
   }
 }

@@ -12,19 +12,17 @@ class DescriptionPetPreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
+      height: 90,
       width: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      color: Colors.white,
       padding: const EdgeInsets.all(6),
       child: Container(
         color: Colors.white,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 120,
+            SizedBox(
+              height: 100,
               width: 130,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,8 +91,9 @@ class DescriptionPetPreview extends StatelessWidget {
                   height: 8,
                 ),
                 Container(
+                  color: Colors.white,
                   alignment: AlignmentDirectional.topEnd,
-                  height: 60,
+                  height: 40,
                   width: 100,
                   child: Text(
                     ' ${petDescription.idade}',
