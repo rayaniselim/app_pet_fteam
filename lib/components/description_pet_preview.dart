@@ -43,7 +43,7 @@ class DescriptionPetPreview extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 14,
                     ),
                     textAlign: TextAlign.start,
                   ),

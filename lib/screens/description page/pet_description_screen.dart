@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'description_screen_body.dart';
 
-class PetDescriptionScreen extends StatefulWidget {
-  const PetDescriptionScreen({Key? key}) : super(key: key);
+class PetsDescriptionHomeScreen extends StatefulWidget {
+  const PetsDescriptionHomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<PetDescriptionScreen> createState() => _DescriptionScreenState();
+  State<PetsDescriptionHomeScreen> createState() => _DescriptionScreenState();
 }
 
-class _DescriptionScreenState extends State<PetDescriptionScreen> {
+class _DescriptionScreenState extends State<PetsDescriptionHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

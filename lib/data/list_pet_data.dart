@@ -1,6 +1,17 @@
+import 'package:flutter/material.dart';
+
 import '../model/item_pet_model.dart';
 
 const List<ItemPet> listPetData = [
+  ItemPet(
+    nome: 'Sparky',
+    raca: 'Golden Retrivier',
+    idade: '8 months old',
+    sexo: 'Female',
+    image: 'assets/golden/g7.png',
+    localizacao: '2.5 kms away',
+    isFavorite: Colors.deepOrange,
+  ),
   ItemPet(
     nome: 'Flora',
     raca: 'Chihuahua',
@@ -8,6 +19,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Female',
     image: 'assets/image/c1.png',
     localizacao: '2.5 kms away',
+    isFavorite: Colors.deepOrange,
   ),
 
   ItemPet(
@@ -17,6 +29,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Male',
     image: 'assets/image/c2.png',
     localizacao: '1.6 kms away',
+    isFavorite: false,
   ),
   ItemPet(
     nome: 'Daisy',
@@ -25,6 +38,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Female',
     image: 'assets/image/c3.png',
     localizacao: '2 kms away',
+    isFavorite: false,
   ),
   ItemPet(
     nome: 'Sparky',
@@ -33,6 +47,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Male',
     image: 'assets/image/c5.png',
     localizacao: '1.8 kms away',
+    isFavorite: false,
   ),
   ItemPet(
     nome: 'Max',
@@ -41,6 +56,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Male',
     image: 'assets/image/c6.png',
     localizacao: '2.6 kms away',
+    isFavorite: false,
   ),
   ItemPet(
     nome: 'Zoe',
@@ -49,6 +65,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Female',
     image: 'assets/image/c4.png',
     localizacao: '3.0 kms away',
+    isFavorite: false,
   ),
 
   // ----------
@@ -60,6 +77,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Male',
     image: 'assets/image/c5.png',
     localizacao: '1.8 kms away',
+    isFavorite: false,
   ),
   ItemPet(
     nome: 'Max',
@@ -68,6 +86,7 @@ const List<ItemPet> listPetData = [
     sexo: 'Male',
     image: 'assets/image/c6.png',
     localizacao: '2.6 kms away',
+    isFavorite: false,
   ),
   ItemPet(
     nome: 'Zoe',
@@ -76,5 +95,6 @@ const List<ItemPet> listPetData = [
     sexo: 'Female',
     image: 'assets/image/c4.png',
     localizacao: '3.0 kms away',
+    isFavorite: false,
   ),
 ];

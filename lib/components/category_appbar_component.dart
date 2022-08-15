@@ -17,29 +17,32 @@ class CategoryAppBarComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: itemSelecionado == true
-            ? Colors.deepOrange[400]
-            : Colors.white, // mudar a cor do item selecionado
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Row(
-        children: [
-          AspectRatio(
-            aspectRatio: 1.3, // proporcao da tela
-            child: Image.asset(categoryPetModel.icone),
-          ),
-          const SizedBox(width: 6),
-          Text(
-            categoryPetModel.especie,
-            style: const TextStyle(
-              letterSpacing: -0.8, // espacamento no texto
-              fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: itemSelecionado == true
+              ? Colors.deepOrange[400]
+              : Colors.white, // mudar a cor do item selecionado
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Row(
+          children: [
+            AspectRatio(
+              aspectRatio: 1.3, // proporcao da tela
+              child: Image.asset(categoryPetModel.icone),
             ),
-          ),
-        ],
+            const SizedBox(width: 7),
+            Text(
+              categoryPetModel.especie,
+              style: const TextStyle(
+                letterSpacing: -0.8, // espacamento no texto
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

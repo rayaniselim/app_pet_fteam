@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/Home_screen.dart';
+import 'screens/home_description.dart';
+import 'screens/home_screen.dart';
 import 'screens/description page/pet_description_screen.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
       ),
       // home: const HomeScreen(),
-      home: const PetDescriptionScreen(),
+      // home: const PetsDescriptionHomeScreen(),
+      home: const HomeDescription(),
     );
   }
 }

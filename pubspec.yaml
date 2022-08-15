@@ -68,6 +68,12 @@ flutter:
       - assets/image/c6.png
       - assets/image/yellow.png
       - assets/image/golden2.png
+      - assets/golden/g1.png
+      - assets/golden/g2.png
+      - assets/golden/g3.png
+      - assets/golden/g4.png
+      - assets/golden/g5.png
+      - assets/golden/g7.png
       - assets/icon/images/settings.png
       - assets/icon/images/dog.png
       - assets/icon/images/cat.png

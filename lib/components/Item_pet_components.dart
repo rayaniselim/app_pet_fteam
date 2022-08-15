@@ -3,31 +3,31 @@ import 'package:flutter/material.dart';
 
 class ItemPetComponents extends StatelessWidget {
   final ItemPet petPage;
+  final VoidCallback onTap;
 
   const ItemPetComponents({
     Key? key,
     required this.petPage,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 120,
-      width: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
-      ),
-      padding: const EdgeInsets.all(8),
+    return InkWell(
+      onTap: onTap,
       child: Container(
-        color: Colors.white,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(22),
+          color: Colors.white,
+        ),
+        padding: const EdgeInsets.all(8),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              height: 95,
-              width: 100,
-// https://macoratti.net/19/09/flut_circimg2.htm
+              height: 104,
+              width: 104,
+              // https://macoratti.net/19/09/flut_circimg2.htm
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(20),
@@ -55,15 +55,17 @@ class ItemPetComponents extends StatelessWidget {
                       ),
                       textAlign: TextAlign.start,
                     ),
+                    const SizedBox(height: 4),
                     Text(
                       petPage.raca,
                       style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Colors.black,
-                        fontSize: 12,
+                        fontSize: 14,
                       ),
                       textAlign: TextAlign.start,
                     ),
+                    const SizedBox(height: 4),
                     Text(
                       '${petPage.sexo}, ${petPage.idade}',
                       style: const TextStyle(
@@ -72,6 +74,7 @@ class ItemPetComponents extends StatelessWidget {
                         fontSize: 12,
                       ),
                     ),
+                    const SizedBox(height: 8),
                     Expanded(
                       flex: 1,
                       child: Row(

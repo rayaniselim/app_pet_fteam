@@ -4,6 +4,7 @@ class ItemPet {
   final String idade;
   final String sexo;
   final String image;
+  final dynamic isFavorite;
   final String localizacao;
 
   const ItemPet({
@@ -12,6 +13,7 @@ class ItemPet {
     required this.idade,
     required this.sexo,
     required this.image,
+    required this.isFavorite,
     required this.localizacao,
   });
 }
