@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/home_description.dart';
-import 'screens/home_screen.dart';
-import 'screens/description page/pet_description_screen.dart';
+
+import 'app/app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,11 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.teal,
       ),
-      // home: const HomeScreen(),
-      // home: const PetsDescriptionHomeScreen(),
-      home: const HomeDescription(),
+      home: const PetsListScreen(),
     );
   }
 }

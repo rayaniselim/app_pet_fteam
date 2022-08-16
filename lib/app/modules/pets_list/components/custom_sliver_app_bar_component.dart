@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-// barra branca da app bar
-class AppBarComponents extends StatelessWidget {
-  const AppBarComponents({Key? key}) : super(key: key);
+class CustomSliverAppBarComponent extends StatelessWidget {
+  const CustomSliverAppBarComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return SliverAppBar(
+      toolbarHeight: 86,
+      floating: true,
       elevation: 0,
       backgroundColor: Colors.white,
       leading: Padding(
@@ -17,8 +18,8 @@ class AppBarComponents extends StatelessWidget {
           bottom: 0,
         ),
         child: Image.asset(
-          'assets/icon/images/line.png',
-          color: Colors.grey[700],
+          'assets/images/icons/png/line.png',
+          height: 24,
         ),
       ),
       title: Column(
@@ -27,9 +28,10 @@ class AppBarComponents extends StatelessWidget {
             'Location',
             style: TextStyle(
               color: Colors.grey[400],
-              fontSize: 14,
+              fontSize: 12,
             ),
           ),
+          const SizedBox(height: 4),
           Text(
             'Cameron St., Boston',
             style: TextStyle(
@@ -50,7 +52,7 @@ class AppBarComponents extends StatelessWidget {
           ),
           child: CircleAvatar(
             backgroundImage: AssetImage(
-              'assets/icon/images/1.png',
+              'assets/images/icons/png/girl.png',
             ),
           ),
         ),
