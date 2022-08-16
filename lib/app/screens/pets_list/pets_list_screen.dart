@@ -1,6 +1,7 @@
 import 'package:app_pet_fteam/app/app.dart';
 import 'package:flutter/material.dart';
 
+// page principal
 class PetsListScreen extends StatelessWidget {
   const PetsListScreen({Key? key}) : super(key: key);
 

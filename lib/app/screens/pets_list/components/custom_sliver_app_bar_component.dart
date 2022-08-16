@@ -21,6 +21,7 @@ class CustomSliverAppBarComponent extends StatelessWidget {
         ),
         child: Image.asset(
           'assets/images/icons/png/line.png',
+          color: Colors.grey[800],
           height: 24,
         ),
       ),

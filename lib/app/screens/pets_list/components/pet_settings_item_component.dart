@@ -13,7 +13,10 @@ class PetSettingsItemComponent extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(18),
       ),
-      child: Image.asset('assets/images/icons/png/settings.png'),
+      child: Image.asset(
+        'assets/images/icons/png/settings.png',
+        color: Colors.grey[600],
+      ),
     );
   }
 }

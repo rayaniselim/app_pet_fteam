@@ -1,6 +1,7 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// detalhes do pet abaixo da app bar
 class PetDetailsHeaderComponent extends StatelessWidget {
   const PetDetailsHeaderComponent({Key? key}) : super(key: key);
 
@@ -66,9 +67,10 @@ class PetDetailsHeaderComponent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Icon(
-                Icons.male_sharp,
-                size: 46,
+              Image.asset(
+                'assets/images/icons/png/female.png',
+                height: 28,
+                width: 28,
                 color: Colors.grey[500],
               ),
               const SizedBox(height: 4),

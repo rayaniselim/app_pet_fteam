@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// texto da descricao
 class PetDetailsDescriptionComponent extends StatelessWidget {
   const PetDetailsDescriptionComponent({Key? key}) : super(key: key);
 
@@ -26,17 +27,19 @@ class PetDetailsDescriptionComponent extends StatelessWidget {
             ),
           ),
           Container(
-            height: 114,
+            height: 120,
             width: 400,
             color: Colors.white,
-            // padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(0),
             child: Text(
-              "She is shy at first, but will warm up once she's comfortable. She is not a ranch dog who guards animals and property as she would rather be with her people;  but she is comfortable with animals.  She plays well with other dogs. ",
+              "She is shy at first, but will warm up once she's comfortable. She is not a ranch dog who guards animals and property as she would rather be with her people;  but she is comfortable around animals.  She plays well with other dogs. ",
               style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey[500],
-                fontWeight: FontWeight.normal,
-              ),
+                  fontSize: 14,
+                  color: Colors.grey[500],
+                  fontWeight: FontWeight.normal,
+                  wordSpacing: 3,
+                  letterSpacing: -0.1,
+                  height: 1.5),
               textAlign: TextAlign.start,
             ),
           ),

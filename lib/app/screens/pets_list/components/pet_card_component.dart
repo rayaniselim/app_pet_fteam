@@ -2,6 +2,7 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// descricao do card da page principal
 class PetCardComponent extends StatelessWidget {
   final PetModel pet;
   final VoidCallback onTap;

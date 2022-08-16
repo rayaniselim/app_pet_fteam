@@ -16,7 +16,7 @@ class PetsCategoriesListComponent extends StatelessWidget {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
-        color: Colors.grey[300],
+        color: Colors.grey[200],
       ),
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -48,6 +48,7 @@ class PetsCategoriesListComponent extends StatelessWidget {
                   ValueListenableBuilder(
                     valueListenable: rxSelected,
                     builder: (context, value, _) {
+// Componentes da categoria especies abaixo da app bar
                       return PetCategoryComponent(
                         petCategory: petsCategoriesListData[indexAtual],
                         selectedItem: rxSelected.value == indexAtual,

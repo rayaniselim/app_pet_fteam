@@ -24,7 +24,7 @@ class _PetsListComponentState extends State<PetsListComponent> {
             valueListenable: rxSelected,
             builder: (context, value, _) {
               return Container(
-                color: Colors.grey[300],
+                color: Colors.grey[200],
                 padding: const EdgeInsets.only(
                   left: 24,
                   top: 0,

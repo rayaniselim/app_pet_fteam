@@ -1,4 +1,4 @@
-// os codigos do flutter, (componentes do app)
+//  codigos do flutter, (componentes do app)
 
 export 'screens/pet_details/components/pet_details_adopt_button_component.dart';
 export 'screens/pet_details/components/pet_details_app_bar_component.dart';

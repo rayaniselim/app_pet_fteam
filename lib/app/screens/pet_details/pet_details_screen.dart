@@ -16,12 +16,14 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       appBar: const PreferredSize(
         preferredSize: Size(0, 64),
 
-        /// Aqui se encontra o component de AppBar desta página
+// component do AppBar desta página
         child: PetDetailsAppBarComponent(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: const [
+// detalhes do pet abaixo da app bar
+
           PetDetailsHeaderComponent(),
           Expanded(
             child: PetDetailsImagesComponent(),

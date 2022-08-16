@@ -17,11 +17,11 @@ class PetDetailsImagesComponent extends StatelessWidget {
               left: 24,
               top: 24,
             ),
-
-            /// Aqui vem a lista de fotos
+// Aqui vem a lista de fotos
             child: PetDetailsPhotosListComponent(),
           ),
         ),
+// foto principal do pet
         Flexible(
           flex: 5,
           child: Stack(
@@ -46,6 +46,8 @@ class PetDetailsImagesComponent extends StatelessWidget {
                   color: Colors.transparent,
                   child: Image.asset(
                     'assets/images/pets/golden/golden_7.png',
+                    height: 350,
+                    width: 200,
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
                   ),
