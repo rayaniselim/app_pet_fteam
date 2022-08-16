@@ -7,7 +7,7 @@ class PetsCategoriesListComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// rx = reativo, valor dinamico q altera o estado da tela
+// rx = reativo, valor dinamico q altera o estado da tela
     final rxSelected = ValueNotifier<int>(0);
 
     return Container(
@@ -27,6 +27,7 @@ class PetsCategoriesListComponent extends StatelessWidget {
                 left: indexAtual == 0 ? 24 : 16,
                 top: 24,
                 right:
+// lista de icones da categoria pet
                     indexAtual == (petsCategoriesListData.length - 1) ? 24 : 0,
                 bottom: 24,
               ),
@@ -35,14 +36,15 @@ class PetsCategoriesListComponent extends StatelessWidget {
                   indexAtual == 0
                       ? const AspectRatio(
                           aspectRatio: 1,
+// icone settings da lista de categoria
                           child: PetSettingsItemComponent(),
                         )
                       : const SizedBox(),
-                  indexAtual == 0
-                      ? const SizedBox(width: 20)
-                      : const SizedBox(),
-
-                  /// Builder repsonsavel por alterar o estado da tela
+                  SizedBox(
+// espaco a direita para o componente settings
+                    width: indexAtual == 0 ? 20 : 0,
+                  ),
+// Builder repsonsavel por alterar o estado da tela
                   ValueListenableBuilder(
                     valueListenable: rxSelected,
                     builder: (context, value, _) {

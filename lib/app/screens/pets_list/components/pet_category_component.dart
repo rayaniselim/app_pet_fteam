@@ -1,6 +1,7 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// Componentes da categoria especies abaixo da app bar
 class PetCategoryComponent extends StatelessWidget {
   final PetCategoryModel petCategory;
   final bool selectedItem;
@@ -34,7 +35,7 @@ class PetCategoryComponent extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             Text(
-              petCategory.race,
+              petCategory.species,
               style: TextStyle(
                 color: selectedItem == true ? Colors.white : null,
                 letterSpacing: -0.8,

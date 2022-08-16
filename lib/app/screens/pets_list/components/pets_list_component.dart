@@ -10,15 +10,16 @@ class PetsListComponent extends StatefulWidget {
 }
 
 class _PetsListComponentState extends State<PetsListComponent> {
-  /// rx = reativo, valor dinamico q altera o estado da tela
+  // rx = reativo, valor dinamico q altera o estado da tela
   final rxSelected = ValueNotifier<int>(0);
 
   @override
   Widget build(BuildContext context) {
     return SliverList(
+// constroi os child conforme rolar a tela, reduz a memoria
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int indexAtual) {
-          /// Builder repsonsavel por alterar o estado da tela
+// Builder repsonsavel por alterar o estado da tela
           return ValueListenableBuilder(
             valueListenable: rxSelected,
             builder: (context, value, _) {
@@ -30,8 +31,10 @@ class _PetsListComponentState extends State<PetsListComponent> {
                   right: 24,
                   bottom: 20,
                 ),
+// card dos componentes pet preview
                 child: PetCardComponent(
                   pet: petsListData[indexAtual],
+// aqui ele vai abrir a page de descricao do pet
                   selectedItem: rxSelected.value == indexAtual,
                   onTap: () => rxSelected.value = indexAtual,
                 ),

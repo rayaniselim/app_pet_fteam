@@ -1,9 +1,9 @@
 class PetCategoryModel {
   final String icon;
-  final String race;
+  final String species;
 
   const PetCategoryModel({
     required this.icon,
-    required this.race,
+    required this.species,
   });
 }
