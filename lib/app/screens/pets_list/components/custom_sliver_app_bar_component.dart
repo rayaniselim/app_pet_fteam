@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 // App Bar Home
 
 class CustomSliverAppBarComponent extends StatelessWidget {

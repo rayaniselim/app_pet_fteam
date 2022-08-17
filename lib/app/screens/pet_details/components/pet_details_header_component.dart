@@ -1,7 +1,7 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-// detalhes do pet abaixo da app bar
+// header (cabeçalho): detalhes do pet abaixo da app bar
 class PetDetailsHeaderComponent extends StatelessWidget {
   const PetDetailsHeaderComponent({Key? key}) : super(key: key);
 

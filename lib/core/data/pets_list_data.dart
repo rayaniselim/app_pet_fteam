@@ -1,6 +1,7 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// lista de informaçoes do pet
 List<PetModel> petsListData = [
   const PetModel(
     name: 'Sparky',
@@ -33,13 +34,13 @@ List<PetModel> petsListData = [
     isFavorite: false,
     backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
-      'assets/images/pets/golden/golden_7.png',
-      'assets/images/pets/golden/golden_7.png',
+      'assets/images/pets/c1.png',
+      'assets/images/pets/c1.png',
     ],
     backgroundColor: Colors.yellow,
   ),
   const PetModel(
-    name: 'Sparky',
+    name: 'Tobby',
     race: 'Cocker',
     age: '2 years old',
     sex: 'Male',
@@ -49,8 +50,8 @@ List<PetModel> petsListData = [
     isFavorite: false,
     backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
-      'assets/images/pets/golden/golden_7.png',
-      'assets/images/pets/golden/golden_7.png',
+      'assets/images/pets/c6.png',
+      'assets/images/pets/c6.png',
     ],
     backgroundColor: Colors.yellow,
   ),
@@ -65,8 +66,8 @@ List<PetModel> petsListData = [
     isFavorite: false,
     backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
-      'assets/images/pets/golden/golden_7.png',
-      'assets/images/pets/golden/golden_7.png',
+      'assets/images/pets/c4.png',
+      'assets/images/pets/c4.png',
     ],
     backgroundColor: Colors.yellow,
   ),
@@ -81,8 +82,8 @@ List<PetModel> petsListData = [
     isFavorite: false,
     backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
-      'assets/images/pets/golden/golden_7.png',
-      'assets/images/pets/golden/golden_7.png',
+      'assets/images/pets/c5.png',
+      'assets/images/pets/c5.png',
     ],
     backgroundColor: Colors.yellow,
   ),

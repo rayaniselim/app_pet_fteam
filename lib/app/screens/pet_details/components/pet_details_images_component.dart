@@ -2,6 +2,7 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// body da page details (description)
 class PetDetailsImagesComponent extends StatelessWidget {
   const PetDetailsImagesComponent({Key? key}) : super(key: key);
 

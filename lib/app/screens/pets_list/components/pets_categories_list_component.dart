@@ -2,6 +2,8 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// Componentes dos botoes de categoria especies abaixo da app bar
+
 class PetsCategoriesListComponent extends StatelessWidget {
   const PetsCategoriesListComponent({Key? key}) : super(key: key);
 

@@ -1,8 +1,9 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-// Componentes da categoria especies abaixo da app bar
-
+/* Mudanca de estado (cor) dos componentes dos botoes de categoria especies 
+abaixo da app bar
+*/
 class PetCategoryComponent extends StatelessWidget {
   final PetCategoryModel petCategory;
   final bool selectedItem;
@@ -17,7 +18,7 @@ class PetCategoryComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(12.0),
@@ -38,7 +39,7 @@ class PetCategoryComponent extends StatelessWidget {
             Text(
               petCategory.species,
               style: TextStyle(
-                color: selectedItem == true ? Colors.white : null,
+                color: selectedItem == true ? Colors.white : Colors.grey[900],
                 letterSpacing: -0.8,
                 fontWeight: FontWeight.bold,
               ),

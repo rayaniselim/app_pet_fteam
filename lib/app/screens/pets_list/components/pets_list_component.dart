@@ -2,6 +2,7 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
+// os componentes da lista da page principal
 class PetsListComponent extends StatefulWidget {
   const PetsListComponent({Key? key}) : super(key: key);
 
