@@ -4,22 +4,29 @@ import 'package:flutter/material.dart';
 
 // body da page details (description)
 class PetDetailsImagesComponent extends StatelessWidget {
-  const PetDetailsImagesComponent({Key? key}) : super(key: key);
+  final PetModel pet;
+
+  const PetDetailsImagesComponent({
+    Key? key,
+    required this.pet,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const Flexible(
+        Flexible(
           flex: 2,
           child: Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 24,
               top: 24,
             ),
 // Aqui vem a lista de fotos
-            child: PetDetailsPhotosListComponent(),
+            child: PetDetailsPhotosListComponent(
+              pet: pet,
+            ),
           ),
         ),
 // foto principal do pet
@@ -27,30 +34,39 @@ class PetDetailsImagesComponent extends StatelessWidget {
           flex: 5,
           child: Stack(
             children: [
-              Align(
-                alignment: Alignment.centerRight,
-                child: Container(
-                  padding: const EdgeInsets.all(0),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        petsListData[0].backgroundImage,
+              ConstrainedBox(
+                constraints: const BoxConstraints(
+                  maxWidth: 400,
+                  // minHeight: 400,
+                ),
+                child: Positioned(
+                  bottom: 16,
+                  top: 16,
+                  right: -(MediaQuery.of(context).size.width * 0.25),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: pet.backgroundColor,
+                        borderRadius: BorderRadius.circular(1000),
                       ),
                     ),
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.bottomRight,
+              Positioned(
+                bottom: 0,
+                top: 32,
+                right: 0,
                 child: Container(
                   color: Colors.transparent,
-                  child: Image.asset(
-                    'assets/images/pets/golden/golden_7.png',
-                    height: 350,
-                    width: 200,
-                    fit: BoxFit.cover,
-                    alignment: Alignment.center,
+                  child: Hero(
+                    tag: pet.photo,
+                    child: Image.asset(
+                      pet.photo,
+                      fit: BoxFit.fitHeight,
+                      alignment: Alignment.center,
+                    ),
                   ),
                 ),
               ),

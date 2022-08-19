@@ -1,15 +1,16 @@
 import 'package:app_pet_fteam/app/app.dart';
+import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
 // page datails (description)
-class PetDetailsScreen extends StatefulWidget {
-  const PetDetailsScreen({Key? key}) : super(key: key);
+class PetDetailsScreen extends StatelessWidget {
+  final PetModel pet;
 
-  @override
-  State<PetDetailsScreen> createState() => _PetDetailsScreenState();
-}
+  const PetDetailsScreen({
+    Key? key,
+    required this.pet,
+  }) : super(key: key);
 
-class _PetDetailsScreenState extends State<PetDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,16 +22,20 @@ class _PetDetailsScreenState extends State<PetDetailsScreen> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
-        children: const [
+        children: [
 // detalhes do pet abaixo da app bar
-          PetDetailsHeaderComponent(),
+          PetDetailsHeaderComponent(
+            pet: pet,
+          ),
           Expanded(
-            child: PetDetailsImagesComponent(),
+            child: PetDetailsImagesComponent(
+              pet: pet,
+            ),
           ),
 // texto da descricao
-          PetDetailsDescriptionComponent(),
+          const PetDetailsDescriptionComponent(),
 // botao ADOPT
-          PetDetailsAdoptButtonComponent(),
+          const PetDetailsAdoptButtonComponent(),
         ],
       ),
     );

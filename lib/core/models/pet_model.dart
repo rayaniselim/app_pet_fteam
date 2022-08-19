@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class PetModel {
   final String name;
@@ -9,7 +9,6 @@ class PetModel {
   final String localization;
   final String description;
   final bool isFavorite;
-  final String backgroundImage;
   final Color backgroundColor;
   final List<String> photosList;
 
@@ -22,7 +21,6 @@ class PetModel {
     required this.localization,
     required this.description,
     required this.isFavorite,
-    required this.backgroundImage,
     required this.backgroundColor,
     required this.photosList,
   });

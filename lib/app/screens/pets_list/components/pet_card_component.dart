@@ -22,7 +22,7 @@ class PetCardComponent extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => const PetDetailsScreen()),
+          MaterialPageRoute(builder: (_) => PetDetailsScreen(pet: pet)),
         );
       },
       child: Container(
@@ -36,11 +36,27 @@ class PetCardComponent extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(22),
-              child: Image.asset(
-                pet.photo,
-                fit: BoxFit.cover,
-                height: 104,
-                width: 104,
+              child: Stack(
+                children: [
+                  Positioned(
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      color: pet.backgroundColor,
+                    ),
+                  ),
+                  Hero(
+                    tag: pet.photo,
+                    child: Image.asset(
+                      pet.photo,
+                      fit: BoxFit.fitHeight,
+                      height: 104,
+                      width: 104,
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(width: 10),

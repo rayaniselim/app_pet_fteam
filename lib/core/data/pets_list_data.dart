@@ -3,16 +3,15 @@ import 'package:flutter/material.dart';
 
 // lista de informaçoes do pet
 List<PetModel> petsListData = [
-  const PetModel(
+  PetModel(
     name: 'Sparky',
     race: 'Golden Retrivier',
     age: '8 months old',
     sex: 'Female',
-    photo: 'assets/images/pets/golden/golden_1.png',
+    photo: 'assets/images/pets/golden/golden_7.png',
     localization: '2.5 kms away',
     description: 'hi my name is Rayani Selim',
     isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
       'assets/images/pets/golden/golden_2.png',
       'assets/images/pets/golden/golden_3.png',
@@ -21,25 +20,24 @@ List<PetModel> petsListData = [
       'assets/images/pets/golden/golden_6.png',
       'assets/images/pets/golden/golden_7.png',
     ],
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.yellow.shade600,
   ),
-  const PetModel(
-    name: 'Flora',
-    race: 'Chihuahua',
-    age: '1 years old',
-    sex: 'Female',
-    photo: 'assets/images/pets/c1.png',
-    localization: '2.5 kms away',
-    description: 'hi my name is Rayani Selim',
-    isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
-    photosList: [
-      'assets/images/pets/c1.png',
-      'assets/images/pets/c1.png',
-    ],
-    backgroundColor: Colors.yellow,
-  ),
-  const PetModel(
+  //odel(
+  //   name: 'Flora',
+  //   race: 'Chihuahua',
+  //   age: '1 years old',
+  //   sex: 'Female',
+  //   photo: 'assets/images/pets/c1.png',
+  //   localization: '2.5 kms away',
+  //   description: 'hi my name is Rayani Selim',
+  //   isFavorite: false,
+  //   photosList: [
+  //     'assets/images/pets/c1.png',
+  //     'assets/images/pets/c1.png',
+  //   ],
+  //   backgroundColor: Colors.black,
+  // ),
+  PetModel(
     name: 'Tobby',
     race: 'Cocker',
     age: '2 years old',
@@ -48,46 +46,29 @@ List<PetModel> petsListData = [
     localization: '1.8 kms away',
     description: 'hi my name is Rayani Selim',
     isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
       'assets/images/pets/c6.png',
       'assets/images/pets/c6.png',
     ],
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.lightBlue.shade700,
   ),
-  const PetModel(
-    name: 'Zoe',
-    race: 'Buldogue Frances',
-    age: '1.2 years old',
-    sex: 'Female',
-    photo: 'assets/images/pets/c4.png',
-    localization: '3.0 kms away',
-    description: 'hi my name is Rayani Selim',
-    isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
-    photosList: [
-      'assets/images/pets/c4.png',
-      'assets/images/pets/c4.png',
-    ],
-    backgroundColor: Colors.yellow,
-  ),
-  const PetModel(
-    name: 'Max',
-    race: 'procurar',
-    age: '5 months old',
-    sex: 'Male',
-    photo: 'assets/images/pets/c5.png',
-    localization: '2.6 kms away',
-    description: 'hi my name is Rayani Selim',
-    isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
-    photosList: [
-      'assets/images/pets/c5.png',
-      'assets/images/pets/c5.png',
-    ],
-    backgroundColor: Colors.yellow,
-  ),
-  const PetModel(
+  //odel(
+  //   name: 'Zoe',
+  //   race: 'Buldogue Frances',
+  //   age: '1.2 years old',
+  //   sex: 'Female',
+  //   photo: 'assets/images/pets/c4.png',
+  //   localization: '3.0 kms away',
+  //   description: 'hi my name is Rayani Selim',
+  //   isFavorite: false,
+  //   photosList: [
+  //     'assets/images/pets/c4.png',
+  //     'assets/images/pets/c4.png',
+  //   ],
+  //   backgroundColor: Colors.yellow.shade100,
+  // ),
+
+  PetModel(
     name: 'Charlie',
     race: 'Buldogue',
     age: '1.5 years old',
@@ -96,14 +77,13 @@ List<PetModel> petsListData = [
     localization: '1.6 kms away',
     description: 'hi my name is Rayani Selim',
     isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
       'assets/images/pets/golden/golden_7.png',
       'assets/images/pets/golden/golden_7.png',
     ],
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.yellow.shade700,
   ),
-  const PetModel(
+  PetModel(
     name: 'Daisy',
     race: 'procurar',
     age: '8 months old',
@@ -112,11 +92,25 @@ List<PetModel> petsListData = [
     localization: '2 kms away',
     description: 'hi my name is Rayani Selim',
     isFavorite: false,
-    backgroundImage: 'assets/images/pets/yellow_circle.png',
     photosList: [
       'assets/images/pets/golden/golden_7.png',
       'assets/images/pets/golden/golden_7.png',
     ],
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.yellow.shade100,
+  ),
+  PetModel(
+    name: 'Max',
+    race: 'procurar',
+    age: '5 months old',
+    sex: 'Male',
+    photo: 'assets/images/pets/c5.png',
+    localization: '2.6 kms away',
+    description: 'hi my name is Rayani Selim',
+    isFavorite: false,
+    photosList: [
+      'assets/images/pets/c5.png',
+      'assets/images/pets/c5.png',
+    ],
+    backgroundColor: Colors.yellow.shade100,
   ),
 ];

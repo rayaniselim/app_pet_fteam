@@ -30,7 +30,6 @@ class PetDetailsDescriptionComponent extends StatelessWidget {
             height: 120,
             width: 400,
             color: Colors.white,
-            padding: const EdgeInsets.all(0),
             child: Text(
               "She is shy at first, but will warm up once she's comfortable. She is not a ranch dog who guards animals and property as she would rather be with her people;  but she is comfortable around animals.  She plays well with other dogs. ",
               style: TextStyle(

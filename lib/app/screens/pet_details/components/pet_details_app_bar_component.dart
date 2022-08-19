@@ -18,8 +18,8 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
-      leading: TextButton(
-        onPressed: () {
+      leading: InkWell(
+        onTap: () {
           Navigator.pop(context);
         },
         child: Icon(
@@ -41,8 +41,6 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
                 ),
                 child: InkWell(
 // remove efeito de clic
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
                   onTap: () {
                     rxSelected.value = !value;
                   },

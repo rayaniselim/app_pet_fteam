@@ -13,6 +13,7 @@ class PetsCategoriesListComponent extends StatelessWidget {
     final rxSelected = ValueNotifier<int>(0);
 
     return Container(
+      height: 90,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),

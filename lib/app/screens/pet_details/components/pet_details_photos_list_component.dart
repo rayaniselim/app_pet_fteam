@@ -2,16 +2,14 @@ import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
 // lista de fotos da page descricao pet
-class PetDetailsPhotosListComponent extends StatefulWidget {
-  const PetDetailsPhotosListComponent({Key? key}) : super(key: key);
+class PetDetailsPhotosListComponent extends StatelessWidget {
+  final PetModel pet;
 
-  @override
-  State<PetDetailsPhotosListComponent> createState() =>
-      _PetDetailsPhotosListComponentState();
-}
+  const PetDetailsPhotosListComponent({
+    Key? key,
+    required this.pet,
+  }) : super(key: key);
 
-class _PetDetailsPhotosListComponentState
-    extends State<PetDetailsPhotosListComponent> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -22,7 +20,9 @@ class _PetDetailsPhotosListComponentState
             return AspectRatio(
               aspectRatio: 0.85,
               child: Container(
-                margin: const EdgeInsets.only(bottom: 16),
+                margin: const EdgeInsets.only(
+                  bottom: 16,
+                ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
 // borda da foto
@@ -42,34 +42,38 @@ class _PetDetailsPhotosListComponentState
 // efeito esfumacado 'Gradiente' branco
         Align(
           alignment: Alignment.topCenter,
-          child: Container(
-            height: 32,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-                colors: [
-                  Colors.white.withOpacity(0),
-                  Colors.white54,
-                  Colors.white,
-                ],
+          child: IgnorePointer(
+            child: Container(
+              height: 32,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    Colors.white.withOpacity(0),
+                    Colors.white54,
+                    Colors.white,
+                  ],
+                ),
               ),
             ),
           ),
         ),
         Align(
           alignment: Alignment.bottomCenter,
-          child: Container(
-            height: 42,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white.withOpacity(0),
-                  Colors.white54,
-                  Colors.white,
-                ],
+          child: IgnorePointer(
+            child: Container(
+              height: 32,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.white.withOpacity(0),
+                    Colors.white54,
+                    Colors.white,
+                  ],
+                ),
               ),
             ),
           ),

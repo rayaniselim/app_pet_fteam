@@ -7,22 +7,19 @@ class PetsListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
 // cria   os efeitos de rolagem
       body: CustomScrollView(
         slivers: [
 //  AppBar do tipo Sliver (sliver é area rolavel)
-          const CustomSliverAppBarComponent(),
+          CustomSliverAppBarComponent(),
 // lista de categorias de pets
           SliverToBoxAdapter(
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.11,
-              child: const PetsCategoriesListComponent(),
-            ),
+            child: PetsCategoriesListComponent(),
           ),
 // Lista de pets disponiveis para adoção
-          const PetsListComponent(),
+          PetsSliverListComponent(),
         ],
       ),
     );

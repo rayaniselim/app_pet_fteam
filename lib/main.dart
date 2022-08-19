@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'app/app.dart';
 
 void main() {
@@ -14,6 +15,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
       ),
       home: const PetsListScreen(),
     );
