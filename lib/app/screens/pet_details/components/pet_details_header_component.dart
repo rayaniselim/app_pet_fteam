@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 
 // header (cabeçalho): detalhes do pet abaixo da app bar
 class PetDetailsHeaderComponent extends StatelessWidget {
-  final PetModel pet;
-  const PetDetailsHeaderComponent({
-    Key? key,
-    required this.pet,
-  }) : super(key: key);
+  const PetDetailsHeaderComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +24,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  pet.name,
+                  petsListData[0].name,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -37,7 +33,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  pet.race,
+                  petsListData[0].race,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[800],
@@ -54,7 +50,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                       size: 18,
                     ),
                     Text(
-                      pet.localization,
+                      petsListData[0].localization,
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Colors.grey[500],
@@ -79,7 +75,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                ' ${pet.age}',
+                ' ${petsListData[0].age}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.grey[800],
