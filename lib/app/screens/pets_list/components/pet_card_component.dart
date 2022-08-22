@@ -47,14 +47,11 @@ class PetCardComponent extends StatelessWidget {
                       color: pet.backgroundColor,
                     ),
                   ),
-                  Hero(
-                    tag: pet.photo,
-                    child: Image.asset(
-                      pet.photo,
-                      fit: BoxFit.fitHeight,
-                      height: 104,
-                      width: 104,
-                    ),
+                  Image.asset(
+                    pet.photo,
+                    fit: BoxFit.fitHeight,
+                    height: 104,
+                    width: 104,
                   ),
                 ],
               ),

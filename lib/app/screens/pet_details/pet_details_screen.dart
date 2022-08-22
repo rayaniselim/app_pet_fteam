@@ -24,9 +24,7 @@ class PetDetailsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
 // detalhes do pet abaixo da app bar
-          PetDetailsHeaderComponent(
-            pet: pet,
-          ),
+          const PetDetailsHeaderComponent(),
           Expanded(
             child: PetDetailsImagesComponent(
               pet: pet,

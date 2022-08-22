@@ -20,9 +20,7 @@ class PetDetailsPhotosListComponent extends StatelessWidget {
             return AspectRatio(
               aspectRatio: 0.85,
               child: Container(
-                margin: const EdgeInsets.only(
-                  bottom: 16,
-                ),
+                margin: const EdgeInsets.only(bottom: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
 // borda da foto

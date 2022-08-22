@@ -16,8 +16,7 @@ class PetDetailsImagesComponent extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Flexible(
-          flex: 2,
+        Expanded(
           child: Padding(
             padding: const EdgeInsets.only(
               left: 24,
@@ -30,26 +29,20 @@ class PetDetailsImagesComponent extends StatelessWidget {
           ),
         ),
 // foto principal do pet
-        Flexible(
+        Expanded(
           flex: 5,
           child: Stack(
             children: [
-              ConstrainedBox(
-                constraints: const BoxConstraints(
-                  maxWidth: 400,
-                  // minHeight: 400,
-                ),
-                child: Positioned(
-                  bottom: 16,
-                  top: 16,
-                  right: -(MediaQuery.of(context).size.width * 0.25),
-                  child: AspectRatio(
-                    aspectRatio: 1,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: pet.backgroundColor,
-                        borderRadius: BorderRadius.circular(1000),
-                      ),
+              Positioned(
+                bottom: 16,
+                top: 16,
+                right: -42,
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: pet.backgroundColor,
+                      borderRadius: BorderRadius.circular(1000),
                     ),
                   ),
                 ),
@@ -60,13 +53,10 @@ class PetDetailsImagesComponent extends StatelessWidget {
                 right: 0,
                 child: Container(
                   color: Colors.transparent,
-                  child: Hero(
-                    tag: pet.photo,
-                    child: Image.asset(
-                      pet.photo,
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.center,
-                    ),
+                  child: Image.asset(
+                    pet.photo,
+                    fit: BoxFit.fitHeight,
+                    alignment: Alignment.center,
                   ),
                 ),
               ),
