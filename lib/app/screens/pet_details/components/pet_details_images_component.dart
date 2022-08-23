@@ -14,13 +14,14 @@ class PetDetailsImagesComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Expanded(
+        SizedBox(
+          width: 100,
           child: Padding(
             padding: const EdgeInsets.only(
               left: 24,
-              top: 24,
+              top: 32,
             ),
 // Aqui vem a lista de fotos
             child: PetDetailsPhotosListComponent(
@@ -28,39 +29,19 @@ class PetDetailsImagesComponent extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(
+          width: 20,
+        ),
 // foto principal do pet
         Expanded(
-          flex: 5,
-          child: Stack(
-            children: [
-              Positioned(
-                bottom: 16,
-                top: 16,
-                right: -42,
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: pet.backgroundColor,
-                      borderRadius: BorderRadius.circular(1000),
-                    ),
-                  ),
-                ),
+          child: CutWidget(
+            right: 56,
+            child: Container(
+              color: Colors.pink,
+              child: PetStackImage(
+                pet: pet,
               ),
-              Positioned(
-                bottom: 0,
-                top: 32,
-                right: 0,
-                child: Container(
-                  color: Colors.transparent,
-                  child: Image.asset(
-                    pet.photo,
-                    fit: BoxFit.fitHeight,
-                    alignment: Alignment.center,
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ],

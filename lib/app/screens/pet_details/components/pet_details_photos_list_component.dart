@@ -15,7 +15,7 @@ class PetDetailsPhotosListComponent extends StatelessWidget {
     return Stack(
       children: [
         ListView.builder(
-          itemCount: petsListData[0].photosList.length,
+          itemCount: pet.photosList.length,
           itemBuilder: (context, index) {
             return AspectRatio(
               aspectRatio: 0.85,
@@ -29,7 +29,7 @@ class PetDetailsPhotosListComponent extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      petsListData[0].photosList[index],
+                      pet.photosList[index],
                     ),
                   ),
                 ),

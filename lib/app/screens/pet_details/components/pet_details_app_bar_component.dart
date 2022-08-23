@@ -10,13 +10,13 @@ class PetDetailsAppBarComponent extends StatefulWidget {
 }
 
 class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
-  /// rx = reativo, valor dinamico q altera o estado da tela
+// rx = reativo, valor dinamico q altera o estado da tela
   final rxSelected = ValueNotifier<bool>(false);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       leading: InkWell(
         onTap: () {
@@ -31,37 +31,38 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
       actions: [
 // Builder - alterar o estado da tela
         ValueListenableBuilder(
-            valueListenable: rxSelected,
-            builder: (context, bool value, __) {
-              return Padding(
-                padding: const EdgeInsets.only(
-                  top: 6,
-                  right: 24.0,
-                  bottom: 6,
-                ),
-                child: InkWell(
+          valueListenable: rxSelected,
+          builder: (context, bool value, __) {
+            return Padding(
+              padding: const EdgeInsets.only(
+                top: 6,
+                right: 24.0,
+                bottom: 6,
+              ),
+              child: InkWell(
 // remove efeito de clic
-                  onTap: () {
-                    rxSelected.value = !value;
-                  },
-                  child: AspectRatio(
+                onTap: () {
+                  rxSelected.value = !value;
+                },
+                child: AspectRatio(
 // tamanho do container do coracao
-                    aspectRatio: 1,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.deepOrange.withOpacity(0.4),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Icon(
-                        value == true ? Icons.favorite : Icons.favorite_border,
-                        color: Colors.deepOrange,
-                        size: 28,
-                      ),
+                  aspectRatio: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.deepOrange.withOpacity(0.4),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Icon(
+                      value == true ? Icons.favorite : Icons.favorite_border,
+                      color: Colors.deepOrange,
+                      size: 28,
                     ),
                   ),
                 ),
-              );
-            }),
+              ),
+            );
+          },
+        ),
       ],
     );
   }
