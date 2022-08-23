@@ -33,17 +33,17 @@ class PetDetailsImagesComponent extends StatelessWidget {
           width: 20,
         ),
 // foto principal do pet
-        Expanded(
-          child: CutWidget(
-            right: 56,
-            child: Container(
-              color: Colors.pink,
-              child: PetStackImage(
-                pet: pet,
-              ),
-            ),
-          ),
-        ),
+        // Expanded(
+        //   child: CutWidget(
+        //     right: 56,
+        //     child: Container(
+        //       color: Colors.pink,
+        //       child: PetStackImage(
+        //         pet: pet,
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
