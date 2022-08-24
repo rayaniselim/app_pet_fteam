@@ -2,7 +2,7 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-// os componentes da lista da page principal
+/// os componentes da lista da page principal
 class PetsSliverListComponent extends StatefulWidget {
   const PetsSliverListComponent({Key? key}) : super(key: key);
 

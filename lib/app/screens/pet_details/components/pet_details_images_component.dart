@@ -13,33 +13,37 @@ class PetDetailsImagesComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SizedBox(
-          width: 100,
+          width: 138,
           child: Padding(
             padding: const EdgeInsets.only(
               left: 24,
-              top: 32,
+              top: 16,
+              right: 24,
+              bottom: 8,
             ),
+
+            /// Aqui vem a lista de fotos
             child: PetDetailsPhotosListComponent(
               pet: pet,
             ),
           ),
         ),
-        // const SizedBox(
-        //   width: 20,
-        // ),
+
+        /// foto principal do pet
         Expanded(
-          child:
-              //  LayoutBuilder(
-              //   builder: (BuildContext context, BoxConstraints constraints) {
-              //     return
-              PetDetailsStackImage(
-            pet: pet,
-            widgetWidth: 300,
-            //   );
-            // },
+          child: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              return Align(
+                alignment: Alignment.centerRight,
+                child: PetDetailsStackImage(
+                  pet: pet,
+                  widgetWidth: constraints.maxWidth,
+                ),
+              );
+            },
           ),
         ),
       ],

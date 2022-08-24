@@ -2,7 +2,7 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-// page datails (description)
+/// page datails (description)
 class PetDetailsScreen extends StatelessWidget {
   final PetModel pet;
 
@@ -17,24 +17,29 @@ class PetDetailsScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: const PreferredSize(
         preferredSize: Size(0, 64),
-// component do AppBar desta página
+
+        /// component do AppBar desta página
         child: PetDetailsAppBarComponent(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-// detalhes do pet abaixo da app bar
+          /// detalhes do pet abaixo da app bar
           PetDetailsHeaderComponent(
             pet: pet,
           ),
+
+          ///  parte das fotos
           Expanded(
             child: PetDetailsImagesComponent(
               pet: pet,
             ),
           ),
-// texto da descricao
+
+          /// texto da descricao
           const PetDetailsDescriptionComponent(),
-// botao ADOPT
+
+          /// botao ADOPT
           const PetDetailsAdoptButtonComponent(),
         ],
       ),

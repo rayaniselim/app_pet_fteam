@@ -1,6 +1,6 @@
 import 'package:app_pet_fteam/core/core.dart';
 
-// Lista de informaçao da Categoria das especies de animais
+///[DOCUMENTATION] Lista de informaçao da Categoria das especies de animais
 const List<PetCategoryModel> petsCategoriesListData = [
   PetCategoryModel(
     species: 'Dogs',

@@ -1,7 +1,7 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-// lista de fotos da page descricao pet
+/// lista de fotos da page descricao pet
 class PetDetailsPhotosListComponent extends StatelessWidget {
   final PetModel pet;
 
@@ -23,7 +23,8 @@ class PetDetailsPhotosListComponent extends StatelessWidget {
                 margin: const EdgeInsets.only(bottom: 16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-// borda da foto
+
+                  /// borda da foto
                   border: Border.all(color: Colors.grey.shade200, width: 2.5),
                   color: Colors.white,
                   image: DecorationImage(
@@ -37,7 +38,8 @@ class PetDetailsPhotosListComponent extends StatelessWidget {
             );
           },
         ),
-// efeito esfumacado 'Gradiente' branco
+
+        /// efeito esfumacado 'Gradiente' branco
         Align(
           alignment: Alignment.topCenter,
           child: IgnorePointer(

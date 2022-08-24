@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// botao de adopt da page de descricao
+/// botao de adopt da page de descricao
 class PetDetailsAdoptButtonComponent extends StatelessWidget {
   const PetDetailsAdoptButtonComponent({Key? key}) : super(key: key);
 

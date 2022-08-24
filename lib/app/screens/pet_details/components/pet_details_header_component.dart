@@ -1,7 +1,7 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-// header (cabeçalho): detalhes do pet abaixo da app bar
+/// header (cabeçalho): detalhes do pet abaixo da app bar
 class PetDetailsHeaderComponent extends StatelessWidget {
   final PetModel pet;
   const PetDetailsHeaderComponent({
@@ -72,7 +72,9 @@ class PetDetailsHeaderComponent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Image.asset(
-                'assets/images/icons/png/female.png',
+                pet.sex.toLowerCase() == 'female'
+                    ? 'assets/images/icons/png/female.png'
+                    : 'assets/images/icons/png/male.png',
                 height: 28,
                 width: 28,
                 color: Colors.grey[500],

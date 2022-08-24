@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// appBar da page de descriçao
+/// appBar da page de descriçao
 class PetDetailsAppBarComponent extends StatefulWidget {
   const PetDetailsAppBarComponent({Key? key}) : super(key: key);
 
@@ -10,7 +10,7 @@ class PetDetailsAppBarComponent extends StatefulWidget {
 }
 
 class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
-// rx = reativo, valor dinamico q altera o estado da tela
+  /// rx = reativo, valor dinamico q altera o estado da tela
   final rxSelected = ValueNotifier<bool>(false);
 
   @override
@@ -29,7 +29,7 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
         ),
       ),
       actions: [
-// Builder - alterar o estado da tela
+        /// Builder - alterar o estado da tela
         ValueListenableBuilder(
           valueListenable: rxSelected,
           builder: (context, bool value, __) {
@@ -40,12 +40,12 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
                 bottom: 6,
               ),
               child: InkWell(
-// remove efeito de clic
+                /// remove efeito de clic
                 onTap: () {
                   rxSelected.value = !value;
                 },
                 child: AspectRatio(
-// tamanho do container do coracao
+                  /// tamanho do container do coracao
                   aspectRatio: 1,
                   child: Container(
                     decoration: BoxDecoration(
