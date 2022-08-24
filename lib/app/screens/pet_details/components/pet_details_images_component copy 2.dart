@@ -35,11 +35,18 @@ class PetDetailsImagesComponent extends StatelessWidget {
               //  LayoutBuilder(
               //   builder: (BuildContext context, BoxConstraints constraints) {
               //     return
-              PetDetailsStackImage(
-            pet: pet,
-            widgetWidth: 300,
-            //   );
-            // },
+              Positioned(
+            right: 100,
+            child: Container(
+              transform: Matrix4.translationValues(300 * .3, 0.0, 0.0),
+              color: Colors.pink,
+              child: PetDetailsStackImage(
+                pet: pet,
+                widgetWidth: 300,
+                //   );
+                // },
+              ),
+            ),
           ),
         ),
       ],

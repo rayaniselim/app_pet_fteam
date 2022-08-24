@@ -14,4 +14,4 @@ export 'screens/pets_list/components/pet_settings_item_component.dart';
 export 'screens/pets_list/components/pets_categories_list_component.dart';
 export 'screens/pets_list/components/pets_list_component.dart';
 export 'screens/pets_list/pets_list_screen.dart';
-export 'screens/pet_details/components/pet_stack_image.dart';
+export 'screens/pet_details/components/pet_details_stack_image.dart';
