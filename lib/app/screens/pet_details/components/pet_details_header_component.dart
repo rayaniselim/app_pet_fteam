@@ -1,4 +1,6 @@
+import 'package:app_pet_fteam/app/dev_mode/dev_constantes.dart';
 import 'package:app_pet_fteam/core/core.dart';
+import 'package:app_pet_fteam/core/utils/string_extensions.dart';
 import 'package:flutter/material.dart';
 
 /// header (cabeçalho): detalhes do pet abaixo da app bar
@@ -28,7 +30,8 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  pet.name,
+                  pet.name + DevConstantes.testTextOverflow,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -37,7 +40,8 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  pet.race,
+                  pet.race + DevConstantes.testTextOverflow,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[800],
@@ -53,12 +57,15 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                       color: Colors.deepOrange,
                       size: 18,
                     ),
-                    Text(
-                      pet.localization,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        color: Colors.grey[500],
-                        fontSize: 14,
+                    Expanded(
+                      child: Text(
+                        pet.localization + DevConstantes.testTextOverflow,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.grey[500],
+                          fontSize: 14,
+                        ),
                       ),
                     ),
                   ],
@@ -66,7 +73,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               ],
             ),
           ),
-          const Spacer(),
+          // const Spacer(),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -81,7 +88,8 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                ' ${pet.age}',
+                pet.age.truncate(length: 10),
+                overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.grey[800],

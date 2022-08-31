@@ -1,3 +1,4 @@
+import 'package:app_pet_fteam/app/dev_mode/dev_constantes.dart';
 import 'package:flutter/material.dart';
 
 /// texto da descricao
@@ -32,7 +33,9 @@ class PetDetailsDescriptionComponent extends StatelessWidget {
             ),
           ),
           Text(
-            "She is shy at first, but will warm up once she's comfortable. She is not a ranch dog who guards animals and property as she would rather be with her people;  but she is comfortable around animals.  She plays well with other dogs. ",
+            "She is shy at first, but will warm up once she's comfortable. She is not a ranch dog who guards animals and property as she would rather be with her people;  but she is comfortable around animals.  She plays well with other dogs. " +
+                DevConstantes.testTextOverflow,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
                 fontSize: 14,
                 color: Colors.grey[500],
