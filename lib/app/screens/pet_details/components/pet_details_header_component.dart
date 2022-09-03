@@ -40,22 +40,26 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
                 const SizedBox(height: 8),
-                Text(
-                  pet.race,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[800],
-                    fontSize: 14,
+                Container(
+                  width: 90,
+                  color: Colors.pink,
+                  child: Text(
+                    pet.race,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[800],
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.start,
                   ),
-                  textAlign: TextAlign.start,
                 ),
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.location_on_sharp,
-                      color: Colors.deepOrange,
+                      color: Theme.of(context).primaryColor,
                       size: 18,
                     ),
                     Expanded(
@@ -87,13 +91,23 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 color: Colors.grey[500],
               ),
               const SizedBox(height: 4),
-              Text(
-                pet.age.truncate(length: 16),
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
-                  fontSize: 14,
+              Container(
+                width: 80,
+                color: Colors.pink,
+                child: Text(
+                  /// O "truncate" ele tem a mesma função que o overflow: TextOverflow.ellipsis,
+                  /// que é cotar uma string após ela atingir um certo tamanho. A diferença é
+                  /// que o parrametro "overflow" da classe "Text()" ele corta a String baseado
+                  /// no tamanho do width do Widget pai, já o "truncate" ele corta a String baseada
+                  /// na quantidade de caracteres presentes dentro da String em si.
+                  pet.age.truncate(length: 10),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                    fontSize: 14,
+                  ),
                 ),
               ),
             ],

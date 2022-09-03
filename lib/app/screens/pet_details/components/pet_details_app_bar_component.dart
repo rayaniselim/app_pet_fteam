@@ -49,12 +49,12 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
                   aspectRatio: 1,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Colors.deepOrange.withOpacity(0.4),
+                      color: Theme.of(context).primaryColor.withOpacity(0.4),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Icon(
                       value == true ? Icons.favorite : Icons.favorite_border,
-                      color: Colors.deepOrange,
+                      color: Theme.of(context).primaryColor,
                       size: 28,
                     ),
                   ),

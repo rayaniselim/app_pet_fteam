@@ -99,9 +99,9 @@ class PetCardComponent extends StatelessWidget {
                         const SizedBox(height: 14),
                         Row(
                           children: [
-                            const Icon(
+                            Icon(
                               Icons.location_on_sharp,
-                              color: Colors.deepOrange,
+                              color: Theme.of(context).primaryColor,
                               size: 18,
                             ),
                             Expanded(
@@ -129,7 +129,7 @@ class PetCardComponent extends StatelessWidget {
                             ? Icons.favorite
                             : Icons.favorite_border,
                         color: selectedItem == true
-                            ? Colors.deepOrange
+                            ? Theme.of(context).primaryColor
                             : Colors.grey[500],
                         size: 28,
                       ),

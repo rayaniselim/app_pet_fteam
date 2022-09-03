@@ -23,7 +23,9 @@ class PetCategoryComponent extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
-          color: selectedItem == true ? Colors.deepOrange : Colors.white,
+          color: selectedItem == true
+              ? Theme.of(context).primaryColor
+              : Colors.white,
           borderRadius: BorderRadius.circular(18),
         ),
         child: Row(

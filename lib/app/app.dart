@@ -1,5 +1,6 @@
 ///[DOCUMENTATION] Arquivo de exportação de arquivos .dart, (componentes do app)
 export 'screens/pet_details/components/pet_details_adopt_button_component.dart';
+export 'components/list_gradient.dart';
 export 'screens/pet_details/components/pet_details_app_bar_component.dart';
 export 'screens/pet_details/components/pet_details_description_component.dart';
 export 'screens/pet_details/components/pet_details_header_component.dart';

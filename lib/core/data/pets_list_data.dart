@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 List<PetModel> petsListData = [
   PetModel(
     name: 'Sparky',
-    race: 'Golden Retrivier',
+    race: 'Golden R e t r i v i e r',
     age: '8 months old',
     sex: 'Female',
     photo: 'assets/images/pets/golden/golden_9.png',
