@@ -11,7 +11,7 @@ class PetSettingsItemComponent extends StatelessWidget {
       padding: const EdgeInsets.all(6.0),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Image.asset(
         'assets/images/icons/png/settings.png',

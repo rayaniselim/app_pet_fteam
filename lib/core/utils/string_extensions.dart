@@ -1,5 +1,5 @@
 extension Truncate on String {
-  String truncate({length = 10, omission = '...'}) {
+  String truncate({length = 12, omission = '...'}) {
     if (length >= this.length) {
       return this;
     }

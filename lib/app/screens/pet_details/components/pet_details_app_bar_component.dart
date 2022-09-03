@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 /// appBar da page de descriçao
@@ -35,28 +37,27 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
           builder: (context, bool value, __) {
             return Padding(
               padding: const EdgeInsets.only(
-                top: 6,
-                right: 24.0,
-                bottom: 6,
+                top: 8,
+                right: 20.0,
+                bottom: 4,
               ),
               child: InkWell(
                 /// remove efeito de clic
                 onTap: () {
                   rxSelected.value = !value;
                 },
-                child: AspectRatio(
-                  /// tamanho do container do coracao
-                  aspectRatio: 1,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor.withOpacity(0.4),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Icon(
-                      value == true ? Icons.favorite : Icons.favorite_border,
-                      color: Theme.of(context).primaryColor,
-                      size: 28,
-                    ),
+
+                child: Container(
+                  padding: const EdgeInsets.only(
+                      right: 9, left: 9, bottom: 0, top: 0),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor.withOpacity(0.4),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Icon(
+                    value == true ? Icons.favorite : Icons.favorite_border,
+                    color: Theme.of(context).primaryColor,
+                    size: 28,
                   ),
                 ),
               ),

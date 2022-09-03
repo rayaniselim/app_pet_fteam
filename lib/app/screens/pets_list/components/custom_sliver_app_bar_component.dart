@@ -14,18 +14,19 @@ class CustomSliverAppBarComponent extends StatelessWidget {
       backgroundColor: Colors.white,
       leading: Padding(
         padding: const EdgeInsets.only(
-          left: 32,
-          top: 0,
+          left: 16,
+          top: 24,
           right: 0,
-          bottom: 0,
+          bottom: 24,
         ),
         child: Image.asset(
           'assets/images/icons/png/line.png',
           color: Colors.grey[800],
-          height: 24,
         ),
       ),
+      centerTitle: true,
       title: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'Location',
@@ -35,7 +36,7 @@ class CustomSliverAppBarComponent extends StatelessWidget {
               fontSize: 12,
             ),
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 6),
           Text(
             'Cameron St., Boston',
             overflow: TextOverflow.ellipsis,
@@ -49,13 +50,9 @@ class CustomSliverAppBarComponent extends StatelessWidget {
       ),
       actions: const [
         Padding(
-          padding: EdgeInsets.only(
-            left: 0,
-            top: 0,
-            right: 24,
-            bottom: 0,
-          ),
+          padding: EdgeInsets.all(16),
           child: CircleAvatar(
+            radius: 40,
             backgroundImage: AssetImage(
               'assets/images/icons/png/girl.png',
             ),

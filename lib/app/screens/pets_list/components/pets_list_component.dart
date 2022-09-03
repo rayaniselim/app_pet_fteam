@@ -27,10 +27,10 @@ class _PetsListComponentState extends State<PetsSliverListComponent> {
               return Container(
                 color: Colors.grey[200],
                 padding: const EdgeInsets.only(
-                  left: 24,
+                  left: 20,
                   top: 0,
-                  right: 24,
-                  bottom: 20,
+                  right: 20,
+                  bottom: 18,
                 ),
 
                 /// card dos componentes pet preview

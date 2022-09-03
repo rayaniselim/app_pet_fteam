@@ -21,12 +21,12 @@ class PetCategoryComponent extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: selectedItem == true
               ? Theme.of(context).primaryColor
               : Colors.white,
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
           children: [
@@ -34,6 +34,7 @@ class PetCategoryComponent extends StatelessWidget {
               aspectRatio: 1,
               child: Image.asset(
                 petCategory.icon,
+                scale: 2,
                 color: selectedItem == true ? Colors.white : Colors.grey[600],
               ),
             ),
@@ -42,6 +43,7 @@ class PetCategoryComponent extends StatelessWidget {
               petCategory.species,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
+                fontSize: 14,
                 color: selectedItem == true ? Colors.white : Colors.grey[900],
                 letterSpacing: -0.8,
                 fontWeight: FontWeight.bold,

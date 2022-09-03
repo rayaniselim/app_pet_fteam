@@ -1,7 +1,6 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:app_pet_fteam/core/utils/string_extensions.dart';
 import 'package:flutter/material.dart';
-
 import '../../../dev_mode/dev_constantes.dart';
 
 class PetDetailsHeaderComponent extends StatelessWidget {
@@ -41,8 +40,8 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Container(
-                  width: 90,
-                  color: Colors.pink,
+                  // width: 90,
+                  // color: Colors.pink,
                   child: Text(
                     pet.race,
                     overflow: TextOverflow.ellipsis,
@@ -92,15 +91,14 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Container(
-                width: 80,
-                color: Colors.pink,
+                // width: 80,
+                // color: Colors.pink,
                 child: Text(
-                  /// O "truncate" ele tem a mesma função que o overflow: TextOverflow.ellipsis,
-                  /// que é cotar uma string após ela atingir um certo tamanho. A diferença é
-                  /// que o parrametro "overflow" da classe "Text()" ele corta a String baseado
-                  /// no tamanho do width do Widget pai, já o "truncate" ele corta a String baseada
-                  /// na quantidade de caracteres presentes dentro da String em si.
-                  pet.age.truncate(length: 10),
+                  /// O "truncate" ele tem a mesma função que o (ellipsis),
+                  /// que é cortar uma string após ela atingir um certo tamanho.
+                  /// O parrametro "overflow - ellipsis" ele corta a String basead no width(largura) do Widget pai.
+                  /// o "truncate" ele corta a String baseado na quantidade de caracteres dentro da String.
+                  pet.age.truncate(length: 12),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(

@@ -30,12 +30,12 @@ class PetCardComponent extends StatelessWidget {
           borderRadius: BorderRadius.circular(24),
           color: const Color.fromRGBO(255, 255, 255, 1),
         ),
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.all(10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(22),
+              borderRadius: BorderRadius.circular(20),
               child: Stack(
                 children: [
                   Positioned(
@@ -50,7 +50,7 @@ class PetCardComponent extends StatelessWidget {
                   Image.asset(
                     pet.photo,
                     fit: BoxFit.fitHeight,
-                    height: 104,
+                    height: 106,
                     width: 104,
                   ),
                 ],
@@ -73,31 +73,32 @@ class PetCardComponent extends StatelessWidget {
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontWeight: FontWeight.w800,
+                            fontSize: 20,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 6),
                         Text(
                           pet.race,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 11,
+                            fontSize: 12,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 6),
                         Text(
                           '${pet.sex}, ${pet.age}',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: Colors.grey[500],
                             fontWeight: FontWeight.w600,
-                            fontSize: 11,
+                            fontSize: 13,
                           ),
                         ),
                         const SizedBox(height: 14),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Icon(
                               Icons.location_on_sharp,
@@ -111,7 +112,7 @@ class PetCardComponent extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.grey[500],
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 11,
+                                  fontSize: 14,
                                 ),
                               ),
                             ),
