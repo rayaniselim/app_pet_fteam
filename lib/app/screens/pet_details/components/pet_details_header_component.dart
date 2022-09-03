@@ -1,9 +1,9 @@
-import 'package:app_pet_fteam/app/dev_mode/dev_constantes.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:app_pet_fteam/core/utils/string_extensions.dart';
 import 'package:flutter/material.dart';
 
-/// header (cabeçalho): detalhes do pet abaixo da app bar
+import '../../../dev_mode/dev_constantes.dart';
+
 class PetDetailsHeaderComponent extends StatelessWidget {
   final PetModel pet;
   const PetDetailsHeaderComponent({
@@ -30,7 +30,8 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  pet.name + DevConstantes.testTextOverflow,
+                  pet.name,
+                  // + DevConstantes.testTextOverflow,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
@@ -40,7 +41,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  pet.race + DevConstantes.testTextOverflow,
+                  pet.race,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -59,7 +60,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        pet.localization + DevConstantes.testTextOverflow,
+                        pet.localization,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontWeight: FontWeight.w400,
@@ -73,7 +74,6 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               ],
             ),
           ),
-          // const Spacer(),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -88,7 +88,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                pet.age.truncate(length: 10),
+                pet.age.truncate(length: 16),
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,

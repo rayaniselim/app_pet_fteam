@@ -1,4 +1,3 @@
-import 'package:app_pet_fteam/app/dev_mode/dev_constantes.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 

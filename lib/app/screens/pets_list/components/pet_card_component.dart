@@ -1,5 +1,4 @@
 import 'package:app_pet_fteam/app/app.dart';
-import 'package:app_pet_fteam/app/dev_mode/dev_constantes.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
@@ -70,7 +69,7 @@ class PetCardComponent extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          pet.name + DevConstantes.testTextOverflow,
+                          pet.name,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
@@ -80,7 +79,7 @@ class PetCardComponent extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          pet.race + DevConstantes.testTextOverflow,
+                          pet.race,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontWeight: FontWeight.w600,
@@ -89,8 +88,7 @@ class PetCardComponent extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          '${pet.sex}, ${pet.age}' +
-                              DevConstantes.testTextOverflow,
+                          '${pet.sex}, ${pet.age}',
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: Colors.grey[500],
@@ -108,8 +106,7 @@ class PetCardComponent extends StatelessWidget {
                             ),
                             Expanded(
                               child: Text(
-                                pet.localization +
-                                    DevConstantes.testTextOverflow,
+                                pet.localization,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
                                   color: Colors.grey[500],

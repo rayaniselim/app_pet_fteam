@@ -1,4 +1,3 @@
-import 'package:app_pet_fteam/app/dev_mode/dev_constantes.dart';
 import 'package:flutter/material.dart';
 
 /// App Bar Home
@@ -38,7 +37,7 @@ class CustomSliverAppBarComponent extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Cameron St., Boston' + DevConstantes.testTextOverflow,
+            'Cameron St., Boston',
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontWeight: FontWeight.bold,
