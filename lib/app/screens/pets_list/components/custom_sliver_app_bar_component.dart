@@ -8,20 +8,23 @@ class CustomSliverAppBarComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      toolbarHeight: 86,
+      toolbarHeight: MediaQuery.of(context).size.height * 0.13,
+      // toolbarHeight: 89,
       floating: true,
       elevation: 0,
       backgroundColor: Colors.white,
       leading: Padding(
         padding: const EdgeInsets.only(
-          left: 16,
-          top: 24,
-          right: 0,
-          bottom: 24,
+          left: 22,
+          top: 40,
+          bottom: 23,
         ),
         child: Image.asset(
           'assets/images/icons/png/line.png',
           color: Colors.grey[800],
+          width: MediaQuery.of(context).size.width * 0.08,
+          height: MediaQuery.of(context).size.height * 0.038,
+          alignment: Alignment.bottomLeft,
         ),
       ),
       centerTitle: true,

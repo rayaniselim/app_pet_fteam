@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 /// appBar da page de descriçao
@@ -18,7 +16,7 @@ class _PetDetailsAppBarComponentState extends State<PetDetailsAppBarComponent> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       elevation: 0,
       leading: InkWell(
         onTap: () {

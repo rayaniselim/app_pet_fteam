@@ -17,6 +17,7 @@ class PetCardComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return InkWell(
       /// Aqui a gente navega para outra pagina ao clicar encima de um card de pet
       onTap: () {
@@ -26,6 +27,8 @@ class PetCardComponent extends StatelessWidget {
         );
       },
       child: Container(
+        width: MediaQuery.of(context).size.width * 0.87,
+        height: MediaQuery.of(context).size.height * 0.18,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
           color: const Color.fromRGBO(255, 255, 255, 1),
@@ -50,13 +53,16 @@ class PetCardComponent extends StatelessWidget {
                   Image.asset(
                     pet.photo,
                     fit: BoxFit.fitHeight,
-                    height: 106,
-                    width: 104,
+                    // height: 106,
+                    height: MediaQuery.of(context).size.height * 0.15,
+                    width: MediaQuery.of(context).size.width * 0.28,
+                    //width: 104,
                   ),
                 ],
               ),
             ),
-            const SizedBox(width: 10),
+            SizedBox(width: size.width * 0.024),
+            // const SizedBox(width: 10),
             Expanded(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +83,8 @@ class PetCardComponent extends StatelessWidget {
                             fontSize: 20,
                           ),
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: size.height * 0.0089),
+                        // const SizedBox(height: 6),
                         Text(
                           pet.race,
                           overflow: TextOverflow.ellipsis,
@@ -86,7 +93,8 @@ class PetCardComponent extends StatelessWidget {
                             fontSize: 12,
                           ),
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: size.height * 0.0089),
+                        // const SizedBox(height: 6),
                         Text(
                           '${pet.sex}, ${pet.age}',
                           overflow: TextOverflow.ellipsis,
@@ -96,7 +104,8 @@ class PetCardComponent extends StatelessWidget {
                             fontSize: 13,
                           ),
                         ),
-                        const SizedBox(height: 14),
+                        SizedBox(height: size.height * 0.02),
+                        // const SizedBox(height: 14),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -122,7 +131,10 @@ class PetCardComponent extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 10.0),
+                    padding: const EdgeInsets.only(
+                      right: 1.6,
+                      top: 2.54,
+                    ),
                     child: InkWell(
                       onTap: onTap,
                       child: Icon(

@@ -24,7 +24,7 @@ class PetDetailsStackImage extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.centerRight,
+            alignment: Alignment.bottomRight,
             child: Image.asset(
               pet.photo,
               fit: BoxFit.fitHeight,

@@ -7,9 +7,8 @@ class PetDetailsAdoptButtonComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 76,
-      width: 220,
-      padding: const EdgeInsets.symmetric(vertical: 20),
+      height: MediaQuery.of(context).size.height * 0.08,
+      width: MediaQuery.of(context).size.width * 0.58,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
         borderRadius: const BorderRadius.only(
@@ -17,32 +16,26 @@ class PetDetailsAdoptButtonComponent extends StatelessWidget {
         ),
       ),
       alignment: Alignment.center,
-      child: Align(
-        alignment: Alignment.center,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 2),
-              child: Image.asset(
-                'assets/images/icons/png/paws.png',
-                height: 24,
-                color: Colors.white,
-              ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'assets/images/icons/png/paws.png',
+            height: MediaQuery.of(context).size.height * 0.027,
+            color: Colors.white,
+          ),
+          const SizedBox(
+            width: 17,
+          ),
+          const Text(
+            'ADOPT',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
-            const SizedBox(
-              width: 20,
-            ),
-            const Text(
-              'ADOPT',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

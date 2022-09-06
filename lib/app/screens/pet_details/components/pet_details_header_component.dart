@@ -41,7 +41,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 const SizedBox(height: 8),
                 Container(
                   // width: 90,
-                  // color: Colors.pink,
+                  // color: Colors.yellow,
                   child: Text(
                     pet.race,
                     overflow: TextOverflow.ellipsis,
@@ -92,15 +92,16 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               const SizedBox(height: 4),
               Container(
                 // width: 80,
-                // color: Colors.pink,
+                // color: Colors.yellow,
                 child: Text(
                   /// O "truncate" ele tem a mesma função que o (ellipsis),
                   /// que é cortar uma string após ela atingir um certo tamanho.
                   /// O parrametro "overflow - ellipsis" ele corta a String basead no width(largura) do Widget pai.
                   /// o "truncate" ele corta a String baseado na quantidade de caracteres dentro da String.
-                  pet.age.truncate(length: 12),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
+                  pet.age.truncate(length: 13),
+                  // pet.age,
+                  // overflow: TextOverflow.ellipsis,
+                  // maxLines: 1,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[800],

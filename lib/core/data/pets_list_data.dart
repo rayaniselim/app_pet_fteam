@@ -1,7 +1,6 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-///[DOCUMENTATION] lista de informaçoes do pet
 List<PetModel> petsListData = [
   PetModel(
     name: 'Sparky',

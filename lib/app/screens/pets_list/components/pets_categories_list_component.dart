@@ -31,7 +31,7 @@ class PetsCategoriesListComponent extends StatelessWidget {
                 top: 24,
                 right:
 
-                    ///[DOCUMENTATION] lista de icones da categoria pet
+                    /// lista de icones da categoria pet
                     indexAtual == (petsCategoriesListData.length - 1) ? 24 : 0,
                 bottom: 24,
               ),
@@ -41,20 +41,20 @@ class PetsCategoriesListComponent extends StatelessWidget {
                       ? const AspectRatio(
                           aspectRatio: 1,
 
-                          ///[DOCUMENTATION] icone settings da lista de categoria
+                          /// icone settings da lista de categoria
                           child: PetSettingsItemComponent(),
                         )
                       : const SizedBox(),
                   SizedBox(
-                    ///[DOCUMENTATION] espaco a direita para o componente settings
+                    /// espaco a direita para o componente settings
                     width: indexAtual == 0 ? 20 : 0,
                   ),
 
-                  ///[DOCUMENTATION] Builder repsonsavel por alterar o estado da tela
+                  /// Builder repsonsavel por alterar o estado da tela, reatividade
                   ValueListenableBuilder(
                     valueListenable: rxSelected,
                     builder: (context, value, _) {
-                      ///[DOCUMENTATION] Componentes da categoria especies abaixo da app bar
+                      /// Componentes da categoria especies abaixo da app bar
                       return PetCategoryComponent(
                         petCategory: petsCategoriesListData[indexAtual],
                         selectedItem: rxSelected.value == indexAtual,

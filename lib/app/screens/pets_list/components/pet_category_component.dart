@@ -21,6 +21,8 @@ class PetCategoryComponent extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
+        // width: MediaQuery.of(context).size.width * 0.23,
+        height: MediaQuery.of(context).size.height * 0.07,
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: selectedItem == true
