@@ -2,7 +2,6 @@ import 'package:app_pet_fteam/app/app.dart';
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:flutter/material.dart';
 
-/// descriçao do card da page principal
 class PetCardComponent extends StatelessWidget {
   final PetModel pet;
   final VoidCallback onTap;
@@ -53,16 +52,13 @@ class PetCardComponent extends StatelessWidget {
                   Image.asset(
                     pet.photo,
                     fit: BoxFit.fitHeight,
-                    // height: 106,
                     height: MediaQuery.of(context).size.height * 0.15,
                     width: MediaQuery.of(context).size.width * 0.28,
-                    //width: 104,
                   ),
                 ],
               ),
             ),
             SizedBox(width: size.width * 0.024),
-            // const SizedBox(width: 10),
             Expanded(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,7 +80,6 @@ class PetCardComponent extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: size.height * 0.0089),
-                        // const SizedBox(height: 6),
                         Text(
                           pet.race,
                           overflow: TextOverflow.ellipsis,
@@ -94,7 +89,6 @@ class PetCardComponent extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: size.height * 0.0089),
-                        // const SizedBox(height: 6),
                         Text(
                           '${pet.sex}, ${pet.age}',
                           overflow: TextOverflow.ellipsis,
@@ -105,7 +99,6 @@ class PetCardComponent extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: size.height * 0.02),
-                        // const SizedBox(height: 14),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [

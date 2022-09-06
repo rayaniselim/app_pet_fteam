@@ -1,7 +1,6 @@
 import 'package:app_pet_fteam/core/core.dart';
 import 'package:app_pet_fteam/core/utils/string_extensions.dart';
 import 'package:flutter/material.dart';
-import '../../../dev_mode/dev_constantes.dart';
 
 class PetDetailsHeaderComponent extends StatelessWidget {
   final PetModel pet;
@@ -30,7 +29,7 @@ class PetDetailsHeaderComponent extends StatelessWidget {
               children: [
                 Text(
                   pet.name,
-                  // + DevConstantes.testTextOverflow,
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
@@ -39,19 +38,15 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
                 const SizedBox(height: 8),
-                Container(
-                  // width: 90,
-                  // color: Colors.yellow,
-                  child: Text(
-                    pet.race,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[800],
-                      fontSize: 14,
-                    ),
-                    textAlign: TextAlign.start,
+                Text(
+                  pet.race,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                    fontSize: 14,
                   ),
+                  textAlign: TextAlign.start,
                 ),
                 const SizedBox(height: 8),
                 Row(
@@ -90,23 +85,17 @@ class PetDetailsHeaderComponent extends StatelessWidget {
                 color: Colors.grey[500],
               ),
               const SizedBox(height: 4),
-              Container(
-                // width: 80,
-                // color: Colors.yellow,
-                child: Text(
-                  /// O "truncate" ele tem a mesma função que o (ellipsis),
-                  /// que é cortar uma string após ela atingir um certo tamanho.
-                  /// O parrametro "overflow - ellipsis" ele corta a String basead no width(largura) do Widget pai.
-                  /// o "truncate" ele corta a String baseado na quantidade de caracteres dentro da String.
-                  pet.age.truncate(length: 13),
-                  // pet.age,
-                  // overflow: TextOverflow.ellipsis,
-                  // maxLines: 1,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[800],
-                    fontSize: 14,
-                  ),
+              Text(
+                /// O "truncate" ele tem a mesma função que o (ellipsis),
+                /// que é cortar uma string após ela atingir um certo tamanho.
+                /// O parrametro "overflow - ellipsis" ele corta a String basead no width(largura) do Widget pai.
+                /// o "truncate" ele corta a String baseado na quantidade de caracteres dentro da String.
+                pet.age.truncate(length: 13),
+                maxLines: 1,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                  fontSize: 14,
                 ),
               ),
             ],

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// App Bar Home
-
 class CustomSliverAppBarComponent extends StatelessWidget {
   const CustomSliverAppBarComponent({Key? key}) : super(key: key);
 
@@ -9,7 +7,6 @@ class CustomSliverAppBarComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       toolbarHeight: MediaQuery.of(context).size.height * 0.13,
-      // toolbarHeight: 89,
       floating: true,
       elevation: 0,
       backgroundColor: Colors.white,
@@ -42,6 +39,7 @@ class CustomSliverAppBarComponent extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             'Cameron St., Boston',
+            maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -55,7 +53,7 @@ class CustomSliverAppBarComponent extends StatelessWidget {
         Padding(
           padding: EdgeInsets.all(16),
           child: CircleAvatar(
-            radius: 40,
+            radius: 22, // raio é metade do diametro
             backgroundImage: AssetImage(
               'assets/images/icons/png/girl.png',
             ),
